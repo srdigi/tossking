@@ -17,23 +17,25 @@
 body{
   height:100vh;
   overflow:hidden;
-  background:#020617;
   color:#fff;
 }
 
-/* BACKGROUND IMAGE (CRICKET) */
+/* STADIUM BACKGROUND */
 .bg{
   position:fixed;
   inset:0;
   background:
-    linear-gradient(rgba(2,6,23,0.75),rgba(2,6,23,0.85)),
-    url("https://images.unsplash.com/photo-1600962815726-457c46a12681");
+    linear-gradient(
+      rgba(0,0,0,0.55),
+      rgba(0,0,0,0.85)
+    ),
+    url("f40cfef2ef26c8f87ea65894d0ba41d7.jpg");
   background-size:cover;
   background-position:center;
   z-index:-1;
 }
 
-/* MAIN WRAPPER */
+/* WRAPPER */
 .container{
   max-width:420px;
   height:100vh;
@@ -41,7 +43,7 @@ body{
   padding:14px;
   display:flex;
   flex-direction:column;
-  justify-content:space-between;
+  justify-content:center;
 }
 
 /* HEADER */
@@ -51,12 +53,12 @@ body{
 .header h1{
   font-size:24px;
   font-weight:700;
-  color:#facc15;
+  color:#ffd166;
 }
 .header p{
   font-size:12px;
   margin-top:6px;
-  color:#cbd5e1;
+  color:#e5e7eb;
 }
 
 /* TAGS */
@@ -71,22 +73,23 @@ body{
   font-size:11px;
   padding:4px 10px;
   border-radius:20px;
-  border:1px solid #38bdf8;
-  color:#38bdf8;
-  background:#020617;
+  border:1px solid #22c55e;
+  color:#22c55e;
+  background:rgba(0,0,0,0.4);
 }
 
-/* BOX */
+/* CONTENT BOX */
 .box{
-  background:rgba(15,23,42,0.94);
-  border:1px solid #1e293b;
+  background:rgba(0,0,0,0.65);
+  border:1px solid rgba(255,255,255,0.15);
   border-radius:14px;
   padding:12px;
   margin-top:10px;
+  backdrop-filter:blur(2px);
 }
 .box h3{
   font-size:14px;
-  color:#38bdf8;
+  color:#60a5fa;
   margin-bottom:6px;
 }
 .box ul{
@@ -95,7 +98,7 @@ body{
 .box ul li{
   font-size:12px;
   padding:3px 0;
-  color:#e5e7eb;
+  color:#f1f5f9;
 }
 
 /* STATS */
@@ -110,56 +113,44 @@ body{
 }
 .stat h4{
   font-size:15px;
-  color:#facc15;
+  color:#ffd166;
 }
 .stat p{
   font-size:11px;
-  color:#94a3b8;
+  color:#e5e7eb;
 }
 
-/* JOIN BUTTON (BIG + GLOW + FLOAT) */
+/* JOIN BUTTON – CONTENT KE END PAR */
 .join{
-  text-align:center;
-  margin-top:-6px;
+  margin-top:14px;
 }
 .join a{
   display:block;
-  background:linear-gradient(90deg,#38bdf8,#22c55e);
-  color:#020617;
+  text-align:center;
+  background:linear-gradient(90deg,#22c55e,#16a34a);
+  color:#022c22;
   font-weight:700;
   font-size:15px;
   padding:16px;
   border-radius:16px;
   text-decoration:none;
   box-shadow:
-    0 0 15px rgba(56,189,248,0.6),
-    0 0 30px rgba(34,197,94,0.4);
-  animation:floatGlow 2s ease-in-out infinite;
+    0 0 20px rgba(34,197,94,0.8),
+    0 0 40px rgba(34,197,94,0.5);
+  animation:glowMove 2s ease-in-out infinite;
 }
 
-@keyframes floatGlow{
-  0%{
-    transform:translateY(0);
-    box-shadow:0 0 15px rgba(56,189,248,0.6),
-               0 0 30px rgba(34,197,94,0.4);
-  }
-  50%{
-    transform:translateY(-6px);
-    box-shadow:0 0 25px rgba(56,189,248,0.9),
-               0 0 45px rgba(34,197,94,0.7);
-  }
-  100%{
-    transform:translateY(0);
-    box-shadow:0 0 15px rgba(56,189,248,0.6),
-               0 0 30px rgba(34,197,94,0.4);
-  }
+@keyframes glowMove{
+  0%{transform:translateY(0)}
+  50%{transform:translateY(-5px)}
+  100%{transform:translateY(0)}
 }
 
 /* FOOTER */
 .footer{
   text-align:center;
   font-size:10px;
-  color:#94a3b8;
+  color:#cbd5f5;
   margin-top:6px;
 }
 </style>
@@ -171,67 +162,62 @@ body{
 
 <div class="container">
 
-  <!-- TOP -->
-  <div>
-    <div class="header">
-      <h1>𝐓𝐎𝐒𝐒 = [ 𝐊𝐈𝐍𝐆 ]™ 🎩</h1>
-      <p>Trusted Premium Cricket Toss & Match Analysis Platform</p>
-    </div>
+  <div class="header">
+    <h1>𝐓𝐎𝐒𝐒 = [ 𝐊𝐈𝐍𝐆 ]™ 🎩</h1>
+    <p>Trusted Premium Cricket Toss & Match Analysis Platform</p>
+  </div>
 
-    <div class="tags">
-      <div class="tag">IPL</div>
-      <div class="tag">BBL</div>
-      <div class="tag">WORLD CUP</div>
-      <div class="tag">T20 • ODI</div>
-    </div>
+  <div class="tags">
+    <div class="tag">IPL</div>
+    <div class="tag">BBL</div>
+    <div class="tag">WORLD CUP</div>
+    <div class="tag">T20 • ODI</div>
+  </div>
 
-    <div class="box">
-      <h3>Why TOSS KING™?</h3>
-      <ul>
-        <li>✔ Data-Driven Toss Pass</li>
-        <li>✔ Pitch & Weather Research</li>
-        <li>✔ Team News Before Toss</li>
-        <li>✔ Trusted Premium Platform</li>
-      </ul>
-    </div>
+  <div class="box">
+    <h3>Why TOSS KING™?</h3>
+    <ul>
+      <li>✔ Accurate Toss Pass</li>
+      <li>✔ Pitch & Weather Analysis</li>
+      <li>✔ Team News Before Toss</li>
+      <li>✔ Premium Trusted Platform</li>
+    </ul>
+  </div>
 
-    <div class="box">
-      <h3>Premium Coverage</h3>
-      <ul>
-        <li>🏏 IPL / BBL Toss Pass</li>
-        <li>🌍 World Cup Matches</li>
-        <li>📊 Session & Over Analysis</li>
-        <li>⚡ Live Match Insights</li>
-      </ul>
-    </div>
+  <div class="box">
+    <h3>Premium Coverage</h3>
+    <ul>
+      <li>🏏 IPL / BBL Matches</li>
+      <li>🌍 World Cup Games</li>
+      <li>📊 Session & Over Analysis</li>
+      <li>⚡ Live Match Insights</li>
+    </ul>
+  </div>
 
-    <div class="stats">
-      <div class="stat">
-        <h4>7+</h4>
-        <p>Years Exp.</p>
-      </div>
-      <div class="stat">
-        <h4>Top</h4>
-        <p>Leagues</p>
-      </div>
-      <div class="stat">
-        <h4>Premium</h4>
-        <p>Users</p>
-      </div>
+  <div class="stats">
+    <div class="stat">
+      <h4>7+</h4>
+      <p>Years Exp.</p>
+    </div>
+    <div class="stat">
+      <h4>Top</h4>
+      <p>Leagues</p>
+    </div>
+    <div class="stat">
+      <h4>Premium</h4>
+      <p>Users</p>
     </div>
   </div>
 
-  <!-- BUTTON -->
-  <div>
-    <div class="join">
-      <a href="https://t.me/+HeCMqXJwHEJiZmQ1" target="_blank">
-        JOIN TELEGRAM – PREMIUM ACCESS
-      </a>
-    </div>
+  <!-- BUTTON EXACTLY AFTER CONTENT -->
+  <div class="join">
+    <a href="https://t.me/+HeCMqXJwHEJiZmQ1" target="_blank">
+      JOIN TELEGRAM – PREMIUM ACCESS
+    </a>
+  </div>
 
-    <div class="footer">
-      © TOSS = [ KING ]™ 🎩
-    </div>
+  <div class="footer">
+    © TOSS = [ KING ]™ 🎩
   </div>
 
 </div>
