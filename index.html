@@ -3,257 +3,218 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TOSS = [ KING ]™ 🎩 | Premium Cricket Toss & Match Analysis</title>
+<title>TOSS = [ KING ]™ 🎩 | Premium Cricket Platform</title>
 
-<!-- FONT -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-<!-- META PIXEL (SAFE – NO VALUE / NO CURRENCY) -->
-<script>
-!function(f,b,e,v,n,t,s){
-if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init','XXXXXXXXXXXXXXX');
-fbq('track','PageView');
-</script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
-body{
-  background:#000;
-  color:#fff;
-  overflow-x:hidden;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
 }
-.bg-video{
+body{
+  height:100vh;
+  overflow:hidden;
+  background:#020617;
+  color:#fff;
+}
+
+/* BACKGROUND */
+.bg{
   position:fixed;
-  top:0;left:0;
-  width:100%;
-  height:100%;
-  background:url("https://media.giphy.com/media/l0HlQ7LRalQqdWfao/giphy.gif") center/cover no-repeat;
-  filter:blur(6px) brightness(0.35);
+  inset:0;
+  background:url("https://media.giphy.com/media/3o7btPCcdNniyf0ArS/giphy.gif") center/cover no-repeat;
+  filter:brightness(0.25) blur(4px);
   z-index:-1;
 }
+
+/* MAIN WRAPPER */
 .container{
   max-width:420px;
+  height:100vh;
   margin:auto;
-  padding:18px;
+  padding:14px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
 }
-.hero{
+
+/* HEADER */
+.header{
   text-align:center;
-  padding:30px 15px;
 }
-.hero h1{
-  font-size:26px;
+.header h1{
+  font-size:24px;
   font-weight:700;
-  color:#f5c16c;
+  color:#facc15;
 }
-.hero p{
-  font-size:13px;
-  color:#ddd;
-  margin-top:8px;
+.header p{
+  font-size:12px;
+  margin-top:6px;
+  color:#cbd5e1;
 }
-.badges{
+
+/* TAGS */
+.tags{
   display:flex;
   justify-content:center;
-  gap:10px;
+  gap:8px;
   flex-wrap:wrap;
-  margin-top:16px;
+  margin-top:10px;
 }
-.badge{
-  border:1px solid #f5c16c;
-  padding:6px 12px;
+.tag{
+  font-size:11px;
+  padding:4px 10px;
   border-radius:20px;
-  font-size:12px;
-  color:#f5c16c;
+  border:1px solid #38bdf8;
+  color:#38bdf8;
+  background:#020617;
 }
-.card{
-  background:rgba(15,15,15,0.85);
-  border:1px solid #1f1f1f;
+
+/* BOX */
+.box{
+  background:rgba(15,23,42,0.92);
+  border:1px solid #1e293b;
   border-radius:14px;
-  padding:18px;
-  margin-top:18px;
+  padding:12px;
+  margin-top:10px;
 }
-.card h3{
-  color:#f5c16c;
-  font-size:18px;
-  margin-bottom:10px;
-}
-.card ul{list-style:none;}
-.card ul li{
+.box h3{
   font-size:14px;
-  padding:6px 0;
-  color:#e6e6e6;
+  color:#38bdf8;
+  margin-bottom:6px;
 }
+.box ul{
+  list-style:none;
+}
+.box ul li{
+  font-size:12px;
+  padding:3px 0;
+  color:#e5e7eb;
+}
+
+/* STATS */
 .stats{
   display:flex;
   justify-content:space-between;
+  margin-top:10px;
+}
+.stat{
+  flex:1;
   text-align:center;
-  margin-top:18px;
 }
 .stat h4{
-  color:#f5c16c;
-  font-size:18px;
+  font-size:15px;
+  color:#facc15;
 }
 .stat p{
-  font-size:12px;
-  color:#ccc;
+  font-size:11px;
+  color:#94a3b8;
 }
-.join-btn{
-  margin:25px 0;
+
+/* JOIN BUTTON */
+.join{
   text-align:center;
+  margin-top:10px;
 }
-.join-btn a{
-  background:linear-gradient(45deg,#f5c16c,#ffb703);
-  color:#000;
-  padding:14px 26px;
-  border-radius:30px;
+.join a{
+  display:block;
+  background:linear-gradient(45deg,#38bdf8,#0ea5e9);
+  color:#020617;
   font-weight:700;
+  padding:14px;
+  border-radius:14px;
   text-decoration:none;
-  display:inline-block;
-  animation:pulse 1.5s infinite;
+  animation:pulse 1.4s infinite;
 }
 @keyframes pulse{
-  0%{transform:scale(1);}
-  50%{transform:scale(1.06);}
-  100%{transform:scale(1);}
+  0%{transform:scale(1)}
+  50%{transform:scale(1.05)}
+  100%{transform:scale(1)}
 }
+
+/* FOOTER */
 .footer{
   text-align:center;
-  font-size:11px;
-  color:#aaa;
-  margin-bottom:12px;
-}
-
-/* LIVE USERS */
-.live-users{
-  position:fixed;
-  top:12px;
-  right:12px;
-  background:rgba(0,0,0,0.7);
-  border:1px solid #f5c16c;
-  padding:6px 10px;
-  font-size:12px;
-  border-radius:20px;
-  color:#f5c16c;
-  z-index:10;
-}
-
-/* FAKE JOIN POPUP */
-.popup{
-  position:fixed;
-  bottom:20px;
-  left:50%;
-  transform:translateX(-50%);
-  background:rgba(0,0,0,0.85);
-  border:1px solid #f5c16c;
-  padding:10px 14px;
-  font-size:12px;
-  border-radius:10px;
-  display:none;
-  z-index:10;
+  font-size:10px;
+  color:#64748b;
+  margin-top:6px;
 }
 </style>
 </head>
 
 <body>
 
-<div class="bg-video"></div>
-
-<div class="live-users">
-  🔥 <span id="users">187</span> Users Online
-</div>
-
-<div class="popup" id="popup"></div>
+<div class="bg"></div>
 
 <div class="container">
 
-  <div class="hero">
-    <h1>𝐓𝐎𝐒𝐒 = [ 𝐊𝐈𝐍𝐆 ]™ 🎩</h1>
-    <p>Trusted Premium Platform for Cricket Toss & Match Analysis</p>
+  <!-- TOP CONTENT -->
+  <div>
+    <div class="header">
+      <h1>𝐓𝐎𝐒𝐒 = [ 𝐊𝐈𝐍𝐆 ]™ 🎩</h1>
+      <p>Trusted Premium Cricket Toss & Match Analysis Platform</p>
+    </div>
 
-    <div class="badges">
-      <div class="badge">IPL</div>
-      <div class="badge">BBL</div>
-      <div class="badge">WORLD CUP</div>
-      <div class="badge">T20 • ODI</div>
+    <div class="tags">
+      <div class="tag">IPL</div>
+      <div class="tag">BBL</div>
+      <div class="tag">WORLD CUP</div>
+      <div class="tag">T20 • ODI</div>
+    </div>
+
+    <div class="box">
+      <h3>Why TOSS KING™?</h3>
+      <ul>
+        <li>✔ Data-Driven Toss Pass</li>
+        <li>✔ Pitch & Weather Research</li>
+        <li>✔ Team News Before Toss</li>
+        <li>✔ Trusted Premium Platform</li>
+      </ul>
+    </div>
+
+    <div class="box">
+      <h3>Premium Coverage</h3>
+      <ul>
+        <li>🏏 IPL / BBL Toss Pass</li>
+        <li>🌍 World Cup Matches</li>
+        <li>📊 Session & Over Analysis</li>
+        <li>⚡ Live Match Insights</li>
+      </ul>
+    </div>
+
+    <div class="stats">
+      <div class="stat">
+        <h4>7+</h4>
+        <p>Years Exp.</p>
+      </div>
+      <div class="stat">
+        <h4>Top</h4>
+        <p>Leagues</p>
+      </div>
+      <div class="stat">
+        <h4>Premium</h4>
+        <p>Users</p>
+      </div>
     </div>
   </div>
 
-  <div class="card">
-    <h3>Why TOSS KING™?</h3>
-    <ul>
-      <li>✔ Data-Driven Toss Analysis</li>
-      <li>✔ Pitch & Weather Research</li>
-      <li>✔ Team News Before Toss</li>
-      <li>✔ Premium Cricket Strategy</li>
-      <li>✔ Built for Serious Cricket Users</li>
-    </ul>
-  </div>
-
-  <div class="card">
-    <h3>Premium Coverage</h3>
-    <ul>
-      <li>🏏 IPL Toss Pass</li>
-      <li>🔥 BBL Match Analysis</li>
-      <li>🌍 World Cup Insights</li>
-      <li>📊 Session & Over Reports</li>
-      <li>⚡ Live Match Updates</li>
-    </ul>
-  </div>
-
-  <div class="stats">
-    <div class="stat">
-      <h4>7+</h4>
-      <p>Years Experience</p>
+  <!-- BOTTOM -->
+  <div>
+    <div class="join">
+      <a href="https://t.me/+HeCMqXJwHEJiZmQ1" target="_blank">
+        JOIN TELEGRAM – PREMIUM ACCESS
+      </a>
     </div>
-    <div class="stat">
-      <h4>Top Leagues</h4>
-      <p>IPL • BBL</p>
-    </div>
-    <div class="stat">
-      <h4>Premium</h4>
-      <p>Trusted Users</p>
-    </div>
-  </div>
 
-  <div class="join-btn">
-    <a href="https://t.me/+HeCMqXJwHEJiZmQ1" target="_blank">
-      JOIN TELEGRAM – PREMIUM ACCESS
-    </a>
-  </div>
-
-  <div class="footer">
-    © TOSS = [ KING ]™ 🎩 | Cricket Analysis Platform
+    <div class="footer">
+      © TOSS = [ KING ]™ 🎩
+    </div>
   </div>
 
 </div>
-
-<script>
-// LIVE USERS COUNTER
-let users = 187;
-setInterval(()=>{
-  users += Math.floor(Math.random()*3);
-  document.getElementById("users").innerText = users;
-},3000);
-
-// FAKE JOIN POPUP
-const names = ["Amit","Rohit","Suresh","Vikas","Ankit","Rahul","Karan"];
-const cities = ["Delhi","Mumbai","Jaipur","Pune","Indore","Ahmedabad"];
-const popup = document.getElementById("popup");
-
-setInterval(()=>{
-  const name = names[Math.floor(Math.random()*names.length)];
-  const city = cities[Math.floor(Math.random()*cities.length)];
-  popup.innerText = `✅ ${name} from ${city} joined Premium`;
-  popup.style.display="block";
-  setTimeout(()=>popup.style.display="none",2500);
-},6000);
-</script>
 
 </body>
 </html>
