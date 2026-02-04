@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TOSS = [ KING ]™ 🎩 | Premium Cricket Toss & Match Analysis</title>
+
+<!-- FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<!-- META PIXEL (SAFE – NO VALUE / NO CURRENCY) -->
+<script>
+!function(f,b,e,v,n,t,s){
+if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','XXXXXXXXXXXXXXX');
+fbq('track','PageView');
+</script>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{
+  background:#000;
+  color:#fff;
+  overflow-x:hidden;
+}
+.bg-video{
+  position:fixed;
+  top:0;left:0;
+  width:100%;
+  height:100%;
+  background:url("https://media.giphy.com/media/l0HlQ7LRalQqdWfao/giphy.gif") center/cover no-repeat;
+  filter:blur(6px) brightness(0.35);
+  z-index:-1;
+}
+.container{
+  max-width:420px;
+  margin:auto;
+  padding:18px;
+}
+.hero{
+  text-align:center;
+  padding:30px 15px;
+}
+.hero h1{
+  font-size:26px;
+  font-weight:700;
+  color:#f5c16c;
+}
+.hero p{
+  font-size:13px;
+  color:#ddd;
+  margin-top:8px;
+}
+.badges{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top:16px;
+}
+.badge{
+  border:1px solid #f5c16c;
+  padding:6px 12px;
+  border-radius:20px;
+  font-size:12px;
+  color:#f5c16c;
+}
+.card{
+  background:rgba(15,15,15,0.85);
+  border:1px solid #1f1f1f;
+  border-radius:14px;
+  padding:18px;
+  margin-top:18px;
+}
+.card h3{
+  color:#f5c16c;
+  font-size:18px;
+  margin-bottom:10px;
+}
+.card ul{list-style:none;}
+.card ul li{
+  font-size:14px;
+  padding:6px 0;
+  color:#e6e6e6;
+}
+.stats{
+  display:flex;
+  justify-content:space-between;
+  text-align:center;
+  margin-top:18px;
+}
+.stat h4{
+  color:#f5c16c;
+  font-size:18px;
+}
+.stat p{
+  font-size:12px;
+  color:#ccc;
+}
+.join-btn{
+  margin:25px 0;
+  text-align:center;
+}
+.join-btn a{
+  background:linear-gradient(45deg,#f5c16c,#ffb703);
+  color:#000;
+  padding:14px 26px;
+  border-radius:30px;
+  font-weight:700;
+  text-decoration:none;
+  display:inline-block;
+  animation:pulse 1.5s infinite;
+}
+@keyframes pulse{
+  0%{transform:scale(1);}
+  50%{transform:scale(1.06);}
+  100%{transform:scale(1);}
+}
+.footer{
+  text-align:center;
+  font-size:11px;
+  color:#aaa;
+  margin-bottom:12px;
+}
+
+/* LIVE USERS */
+.live-users{
+  position:fixed;
+  top:12px;
+  right:12px;
+  background:rgba(0,0,0,0.7);
+  border:1px solid #f5c16c;
+  padding:6px 10px;
+  font-size:12px;
+  border-radius:20px;
+  color:#f5c16c;
+  z-index:10;
+}
+
+/* FAKE JOIN POPUP */
+.popup{
+  position:fixed;
+  bottom:20px;
+  left:50%;
+  transform:translateX(-50%);
+  background:rgba(0,0,0,0.85);
+  border:1px solid #f5c16c;
+  padding:10px 14px;
+  font-size:12px;
+  border-radius:10px;
+  display:none;
+  z-index:10;
+}
+</style>
+</head>
+
+<body>
+
+<div class="bg-video"></div>
+
+<div class="live-users">
+  🔥 <span id="users">187</span> Users Online
+</div>
+
+<div class="popup" id="popup"></div>
+
+<div class="container">
+
+  <div class="hero">
+    <h1>𝐓𝐎𝐒𝐒 = [ 𝐊𝐈𝐍𝐆 ]™ 🎩</h1>
+    <p>Trusted Premium Platform for Cricket Toss & Match Analysis</p>
+
+    <div class="badges">
+      <div class="badge">IPL</div>
+      <div class="badge">BBL</div>
+      <div class="badge">WORLD CUP</div>
+      <div class="badge">T20 • ODI</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Why TOSS KING™?</h3>
+    <ul>
+      <li>✔ Data-Driven Toss Analysis</li>
+      <li>✔ Pitch & Weather Research</li>
+      <li>✔ Team News Before Toss</li>
+      <li>✔ Premium Cricket Strategy</li>
+      <li>✔ Built for Serious Cricket Users</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Premium Coverage</h3>
+    <ul>
+      <li>🏏 IPL Toss Pass</li>
+      <li>🔥 BBL Match Analysis</li>
+      <li>🌍 World Cup Insights</li>
+      <li>📊 Session & Over Reports</li>
+      <li>⚡ Live Match Updates</li>
+    </ul>
+  </div>
+
+  <div class="stats">
+    <div class="stat">
+      <h4>7+</h4>
+      <p>Years Experience</p>
+    </div>
+    <div class="stat">
+      <h4>Top Leagues</h4>
+      <p>IPL • BBL</p>
+    </div>
+    <div class="stat">
+      <h4>Premium</h4>
+      <p>Trusted Users</p>
+    </div>
+  </div>
+
+  <div class="join-btn">
+    <a href="https://t.me/+HeCMqXJwHEJiZmQ1" target="_blank">
+      JOIN TELEGRAM – PREMIUM ACCESS
+    </a>
+  </div>
+
+  <div class="footer">
+    © TOSS = [ KING ]™ 🎩 | Cricket Analysis Platform
+  </div>
+
+</div>
+
+<script>
+// LIVE USERS COUNTER
+let users = 187;
+setInterval(()=>{
+  users += Math.floor(Math.random()*3);
+  document.getElementById("users").innerText = users;
+},3000);
+
+// FAKE JOIN POPUP
+const names = ["Amit","Rohit","Suresh","Vikas","Ankit","Rahul","Karan"];
+const cities = ["Delhi","Mumbai","Jaipur","Pune","Indore","Ahmedabad"];
+const popup = document.getElementById("popup");
+
+setInterval(()=>{
+  const name = names[Math.floor(Math.random()*names.length)];
+  const city = cities[Math.floor(Math.random()*cities.length)];
+  popup.innerText = `✅ ${name} from ${city} joined Premium`;
+  popup.style.display="block";
+  setTimeout(()=>popup.style.display="none",2500);
+},6000);
+</script>
+
+</body>
+</html>
